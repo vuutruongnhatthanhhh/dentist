@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import clsx from "clsx";
@@ -44,9 +45,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full gold-gradient flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-heading font-bold text-lg">P</span>
-            </div>
+            <Image
+              src="/images/logo-dentist.png"
+              alt="Prestige Dental"
+              width={40}
+              height={40}
+              className="rounded-full shrink-0"
+              priority
+            />
             <div className="leading-tight">
               <div className="text-white font-heading font-semibold text-lg tracking-wide group-hover:text-[#C4A35A] transition-colors">
                 Prestige
